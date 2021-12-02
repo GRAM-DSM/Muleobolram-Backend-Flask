@@ -18,7 +18,7 @@ def sigup(id, name, password):
         session.commit()
 
         return {
-                   "message": "ssuccess"
+                   "message": "success"
                }, 201
 
 

@@ -3,6 +3,7 @@ from sqlalchemy import Column, VARCHAR, Integer, DATETIME, text, ForeignKey
 
 from model import Base
 
+
 class Post(Base):
     __tablename__ = 'post'
 

@@ -62,3 +62,20 @@ def post_delete(id, token_Usr):
         return {
                    "massage": "NotFound"
                }, 404
+
+
+def post_update(id, title, content, token_Usr):
+    with session_scope() as session:
+        post = session.query(Post).filter(Post.id == id, Post.user_id == token_Usr).first()
+
+        if post:
+            post.title = title
+            post.content = content
+
+            return 200
+
+        return {
+            'message': 'Error'
+        }
+
+

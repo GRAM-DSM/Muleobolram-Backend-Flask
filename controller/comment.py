@@ -37,4 +37,4 @@ def comment_get(post_id):
                        "name": name,
                        "content": content
                    } for content, name in comment_join]
-               }, 20
+               }, 200

@@ -27,3 +27,6 @@ api_basic.add_resource(PostComment, "/comment_post")
 
 from view.comment import GetComment
 api_basic.add_resource(GetComment, "/comment_get")
+
+from view.post import PutPost
+api_basic.add_resource(PutPost, "/post/<int:id>")
